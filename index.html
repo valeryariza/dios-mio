@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Para Jenn</title>
+    <style>
+        /* Estilos globales para el body */
+        body {
+            background: #800020;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Añadido para centrar verticalmente y apilar las secciones */
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilos para el div #login */
+        #login {
+            background-color: rgb(210, 112, 159);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 20px;
+            /* Para dar espacio entre el formulario y el contenido posterior */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background-color: #800020;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #600016;
+        }
+
+        /* Estilos para las secciones de contenido */
+        #contenido,
+        #contenido1,
+        #contenido2 {
+            display: none;
+            /* Están ocultos inicialmente */
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            /* Añadido margen para separar las secciones */
+        }
+
+        /* Estilos para las animaciones de los corazones */
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos adicionales para las secciones de la página */
+        #seccion1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .proyecto {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .proyecto img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #seccion2 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #seccion3 {
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Formulario de Login -->
+    <div id="login">
+        <h2>Ingrese cuando nos conocimos 💬</h2>
+        <input type="password" id="clave">
+        <br><br>
+        <button onclick="verificarClave()">Entrar</button>
+    </div>
+
+    <!-- Contenido visible después de la clave correcta -->
+    <div id="contenido">
+        <h1>Te estimo un poquito.</h1>
+        <div class="heart">🩲</div>
+        <p>Disculpame por las veces que te hice sentir cosas negativas.<br>Sabes que lo que menos quiero es hacerte
+            sentir de esa manera.</p>
+    </div>
+
+    <!-- Segundo contenido visible después de la clave correcta -->
+    <div id="contenido1">
+        <section id="seccion1">
+            <h1>Jennifer, tengo algo que decirte</h1>
+        </section>
+        <section id="seccion2">
+            <div class="proyecto">
+                <img src="https://i.pinimg.com/736x/94/cd/cf/94cdcf18bc7e2d46197317d95ffe1ff6.jpg"
+                    alt="Imagen Proyecto">
+            </div>
+            <p>Hola, esta es tu página. Estaré trabajando en ella para que sea de tu agrado. Dicho eso, debo agregar que
+                tengo cosas que decirte.</p>
+            <a href="https://open.spotify.com/intl-es/track/754kgU5rWscRTfvlsuEwFp?si=97b9053b07b74e17" target="_blank">
+                <button>Oprime este botón</button>
+            </a>
+            <div class="heart">💖</div>
+        </section>
+    </div>
+
+    <!-- Tercer contenido visible después de la clave correcta -->
+    <div id="contenido2">
+        <section id="seccion3">
+            <h2>HABLEMOS DE TI Y DE TU SONRISA</h2>
+            <img src="https://i.pinimg.com/736x/44/20/ed/4420ed934debeb964a6d30d62e5ec522.jpg" alt="Sonrisa">
+            <p style="margin-top: 80px;">Tienes sonrisa de tiburón, y no es algo feo, es un halago. Así como eres suave
+                como una nubecita, tu espalda es cálida y suave también.</p>
+            <p style="margin-top: 70px;">Hablando en serio, tengo que confesarte que me gusta cuando hay desacuerdos
+                entre nosotras, porque me gusta la forma en la que arreglamos las cosas. Me gusta cuando me hablas de
+                las cosas que te incomodan o las que no te gustan. Me gusta pensar en que me quieres y quieres formar
+                algo conmigo. Ya quiero verte para abrazarte fuerte.</p>
+            <p>Escribo esto con la esperanza de que lo leas temprano antes de ir a la universidad... Nunca fue mi
+                intención que sintieras que no me importan tus sentimientos o que sientas que los minimizo, quiero que
+                sientas que puedes decirme cualquier cosa, que te sientas querida, escuchada, comprendida por mi
+                persona. Te quiero y me gusta mucho dibujar conmigo y con mi hermano, es un tiempo que realmente
+                disfruto con las personas que quiero. Respecto a lo que pasó, puedo decir que trataré de no sacarles
+                temas personales a mi madre. Espero que te vaya bien hoy y disculpa por el desastre de la página.
+                SIEMPRE TUYA, VAL.</p>
+        </section>
+    </div>
+
+    <script>
+        // Función para verificar la clave
+        function verificarClave() {
+            const claveCorrecta = "2002"; // Aquí pones la clave que quieras
+            const claveIngresada = document.getElementById("clave").value;
+            if (claveIngresada === claveCorrecta) {
+                document.getElementById("login").style.display = "none"; // Oculta el formulario de login
+                document.getElementById("contenido").style.display = "block"; // Muestra el primer contenido
+                document.getElementById("contenido1").style.display = "block"; // Muestra el segundo contenido
+                document.getElementById("contenido2").style.display = "block"; // Muestra el tercer contenido
+            } else {
+                alert("ÑAO ÑAO SEÑORITA ❌ Intenta de nuevo.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+</html>
