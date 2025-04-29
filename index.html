@@ -5,32 +5,30 @@
     <meta charset="UTF-8">
     <title>Para Jenn</title>
     <style>
-        /* Estilos globales para el body */
         body {
-            background: #800020;
+            background: #0b3a78;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            /* Añadido para centrar verticalmente y apilar las secciones */
-            height: 100vh;
             margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* Estilos para el div #login */
         #login {
-            background-color: rgb(210, 112, 159);
+            background-color: #41acca;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
-            margin-bottom: 20px;
-            /* Para dar espacio entre el formulario y el contenido posterior */
+            width: 90%;
+            max-width: 400px;
+            margin-top: 50px;
         }
 
         h2 {
-            color: #333;
+            color: #fff;
         }
 
         input[type="password"] {
@@ -38,14 +36,14 @@
             width: 80%;
             margin-top: 10px;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
         }
 
         button {
             padding: 10px 20px;
-            margin-top: 10px;
+            margin-top: 15px;
             border: none;
-            background-color: #800020;
+            background-color: #1d1369;
             color: white;
             font-size: 16px;
             border-radius: 5px;
@@ -53,27 +51,35 @@
         }
 
         button:hover {
-            background-color: #600016;
+            background-color: #44cd3f;
         }
 
-        /* Estilos para las secciones de contenido */
         #contenido,
         #contenido1,
         #contenido2 {
             display: none;
-            /* Están ocultos inicialmente */
-            text-align: center;
             color: white;
-            margin-top: 20px;
-            /* Añadido margen para separar las secciones */
+            width: 90%;
+            max-width: 800px;
+            margin-top: 30px;
+            text-align: center;
         }
 
-        /* Estilos para las animaciones de los corazones */
         .heart {
-            font-size: 50px;
+            font-size: 30px;
             color: red;
-            animation: pulse 1s infinite;
+            animation: pulse 1.2s infinite;
+            text-align: center;
         }
+
+        .heart1 {
+            font-size: 30px;
+            color: pink;
+            animation: pulse 1.2s infinite;
+            text-align: left;
+            margin-top: 20px;
+        }
+
 
         @keyframes pulse {
             0% {
@@ -89,40 +95,39 @@
             }
         }
 
-        /* Estilos adicionales para las secciones de la página */
-        #seccion1 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .proyecto {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .proyecto img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
+        img {
+            width: 90%;
+            max-width: 400px;
             height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
         }
 
-        #seccion2 {
-            font-size: 30px;
-            text-align: center;
+        section {
+            margin-top: 20px;
         }
 
-        #seccion3 {
-            font-style: italic;
-            font-size: 30px;
-            text-align: center;
+        .proyecto p,
+        section p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        a button {
+            background-color: #11133d;
+            margin-top: 20px;
+        }
+
+        a button:hover {
+            background-color: #b25982;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Formulario de Login -->
+    <!-- Formulario -->
     <div id="login">
         <h2>Ingrese cuando nos conocimos 💬</h2>
         <input type="password" id="clave">
@@ -130,73 +135,116 @@
         <button onclick="verificarClave()">Entrar</button>
     </div>
 
-    <!-- Contenido visible después de la clave correcta -->
+    <!-- Contenido desbloqueado -->
     <div id="contenido">
-        <h1>Te estimo un poquito.</h1>
-        <div class="heart">🩲</div>
-        <p>Disculpame por las veces que te hice sentir cosas negativas.<br>Sabes que lo que menos quiero es hacerte
-            sentir de esa manera.</p>
+        <h1>Dias Grises</h1>
+        <div class="heart">👀</div>
+        <p>no se que paso' pero estaremos bien.<br>supongo (mentiris).</p>
     </div>
 
-    <!-- Segundo contenido visible después de la clave correcta -->
     <div id="contenido1">
         <section id="seccion1">
-            <h1>Jennifer, tengo algo que decirte</h1>
+            <h1>Jennifer, no tengo nada que decirte...</h1>
         </section>
         <section id="seccion2">
             <div class="proyecto">
-                <img src="https://i.pinimg.com/736x/94/cd/cf/94cdcf18bc7e2d46197317d95ffe1ff6.jpg"
+                <img src="https://i.pinimg.com/736x/e0/26/2e/e0262ed0c5bc726f02963b583f8429b4.jpg"
                     alt="Imagen Proyecto">
             </div>
-            <p>Hola, esta es tu página. Estaré trabajando en ella para que sea de tu agrado. Dicho eso, debo agregar que
-                tengo cosas que decirte.</p>
-            <a href="https://open.spotify.com/intl-es/track/754kgU5rWscRTfvlsuEwFp?si=97b9053b07b74e17" target="_blank">
-                <button>Oprime este botón</button>
+            <div id="contenidoSpotify" style="margin-top: 20px;">
+                <h3>🎶 Mi playlist para ti:</h3>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/5rREJMuyMJivXgIaqdfW2e?utm_source=generator"
+                    width="100%" height="352" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+            <p>Decidi que te hare una pagina para cuando estes triste, enamorada, enojada, entre otras, quizas.</p>
+            <a href="https://open.spotify.com/intl-es/track/5CBqLg9XdeEHcknJX0fZIJ?si=3649123a65b24c5f" target="_blank">
+                <button>Escucha mientras lees</button>
             </a>
-            <div class="heart">💖</div>
+            <div class="heart1">🤧</div>
         </section>
     </div>
 
-    <!-- Tercer contenido visible después de la clave correcta -->
     <div id="contenido2">
         <section id="seccion3">
-            <h2>HABLEMOS DE TI Y DE TU SONRISA</h2>
-            <img src="https://i.pinimg.com/736x/44/20/ed/4420ed934debeb964a6d30d62e5ec522.jpg" alt="Sonrisa">
-            <p style="margin-top: 80px;">Tienes sonrisa de tiburón, y no es algo feo, es un halago. Así como eres suave
-                como una nubecita, tu espalda es cálida y suave también.</p>
-            <p style="margin-top: 70px;">Hablando en serio, tengo que confesarte que me gusta cuando hay desacuerdos
-                entre nosotras, porque me gusta la forma en la que arreglamos las cosas. Me gusta cuando me hablas de
-                las cosas que te incomodan o las que no te gustan. Me gusta pensar en que me quieres y quieres formar
-                algo conmigo. Ya quiero verte para abrazarte fuerte.</p>
-            <p>Escribo esto con la esperanza de que lo leas temprano antes de ir a la universidad... Nunca fue mi
-                intención que sintieras que no me importan tus sentimientos o que sientas que los minimizo, quiero que
-                sientas que puedes decirme cualquier cosa, que te sientas querida, escuchada, comprendida por mi
-                persona. Te quiero y me gusta mucho dibujar conmigo y con mi hermano, es un tiempo que realmente
-                disfruto con las personas que quiero. Respecto a lo que pasó, puedo decir que trataré de no sacarles
-                temas personales a mi madre. Espero que te vaya bien hoy y disculpa por el desastre de la página.
-                SIEMPRE TUYA, VAL.</p>
+            <h2 style="margin-top: 30px;">Jennifer, Jenn, Jennsita, amor, mi amor, mi vida, zapatico, cabezona, señora
+                robinson</h2>
+            <img src="https://i.pinimg.com/736x/67/13/ad/6713ad0f59c0a66e1c45faca683de397.jpg" alt="Sonrisa Tiburón">
+            <p>No toques si duele, amor,<br>
+                que una herida de tu mano <br>
+                es como una primavera helada <br>
+                y este cuerpo tirita con un solo roce.<br>
+                No te quedesa verme llorar <br>
+                si desconoces el polvo que inunda mis ojos, <br>
+                si no sabes <br>
+                que mis pupilas solo son escondites de palabras, <br>
+                si lo unico que quieres es borrar mis lagrimas <br>
+                en vez de dejar que me seque y pueda respira. <br>
+                No te quedes a verme llorar <br>
+                que no quiero mojarte <br>
+                y que te mueras de frio. <br>
+                No te quedes a verme llorar <br>
+                si no vas a besarme los ojos <br>
+                y ahogarte conmigo.<br>
+                No me rompas el pelo <br>
+                que desde que te quiero nunca me peino, <br>
+                y si ahora te marchas <br>
+                tendré que volver a encontrarme en el espejo, <br>
+                y yo solo quiero mirarme en tus ojos. <br>
+                No vuelvas contra mí <br>
+                todos los motivos que inventaste para quererme<br>
+                como si fueras una suicida por amor, <br>
+                que el romanticismo esta hecho <br>
+                para los que tienen el corazon roto. <br>
+                No huyas <br>
+                si no es <br>
+                de ti <br>
+                hacia mí <br>
+                el movimiento. <br>
+                No me empujes al precipio <br>
+                y me preguntes con voz rota <br>
+                si te prefiero a ti o a los puentes, <br>
+                no me beses si no vas a volver, <br>
+                no te vayas si no vas a girarte mientras lo haces, <br>
+                no te quedes <br>
+                si tu vida es un camino de huida y vuelta, <br>
+                no me abraces por rutina<br>
+                y no dejes de hacerlo por costumbre, <br>
+                no te vuelvas hielo <br>
+                cuando el frio nos apriete las costuras, <br>
+                no te derritas <br>
+                cuando mi boca ya esté seca y no pueda sostenerte. <br>
+                No me duelas<br>
+                si no vas a curarte. <br>
+                No me quieras, <br>
+                QUE AMOR ES QUERERSE<br>
+                HASTA CUANDO NO ME QUIERES <br>
+                y eso es lo único que querría que hicieras siempre <br>
+                y eso es lo único que nunca te pediré que hagas.
+            </p>
+            <p>Me gusta cuando resolvemos nuestras diferencias hablando. Me encanta que me digas lo que sientes. Y me
+                encanta pensar que quieres construir algo conmigo. 💕</p>
+            <p>Espero que hoy tengas un gran día en la universidad. Siempre tuya, Val.</p>
         </section>
     </div>
 
     <script>
-        // Función para verificar la clave
         function verificarClave() {
-            const claveCorrecta = "2002"; // Aquí pones la clave que quieras
+            const claveCorrecta = "2002";
             const claveIngresada = document.getElementById("clave").value;
             if (claveIngresada === claveCorrecta) {
-                document.getElementById("login").style.display = "none"; // Oculta el formulario de login
-                document.getElementById("contenido").style.display = "block"; // Muestra el primer contenido
-                document.getElementById("contenido1").style.display = "block"; // Muestra el segundo contenido
-                document.getElementById("contenido2").style.display = "block"; // Muestra el tercer contenido
+                document.getElementById("login").style.display = "none";
+                document.getElementById("contenido").style.display = "block";
+                document.getElementById("contenido1").style.display = "block";
+                document.getElementById("contenido2").style.display = "block";
             } else {
-                alert("ÑAO ÑAO SEÑORITA ❌ Intenta de nuevo.");
+                alert("ÑAO ÑAO SEÑORITA ❌ Usa la cabezota");
             }
         }
     </script>
 
 </body>
-
-</html>
-
 
 </html>
